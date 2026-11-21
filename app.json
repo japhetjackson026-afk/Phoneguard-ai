@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "PHONEGUARD AI",
+    "slug": "phoneguard-ai",
+    "scheme": "phoneguard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      ["expo-location", {
+        "locationWhenInUsePermission": "PHONEGUARD AI uses your location to help you find your registered device.",
+        "locationAlwaysAndWhenInUsePermission": "PHONEGUARD AI can share your location with your own account to help recover your registered device.",
+        "isAndroidBackgroundLocationEnabled": true,
+        "isAndroidForegroundServiceEnabled": true
+      }],
+      "expo-router"
+    ],
+    "android": {
+      "package": "com.phoneguardai.app",
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "ACCESS_BACKGROUND_LOCATION", "FOREGROUND_SERVICE", "FOREGROUND_SERVICE_LOCATION"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.phoneguardai.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["location"]
+      }
+    }
+  }
+}
